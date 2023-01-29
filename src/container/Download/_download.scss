@@ -1,0 +1,83 @@
+.app__download {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  &_browsers > div {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    height: 352px;
+  }
+  .app__subheading {
+    &-heading {
+      font-size: 1.5rem;
+    }
+  }
+  &_browsers {
+    display: flex;
+    flex-direction: column;
+    &_void {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      &-add {
+        font-weight: 500;
+        font-size: 1.3rem;
+        padding-top: 1.5rem;
+      }
+      &-version {
+        font-size: 1rem;
+        color: $GrayishBlue;
+      }
+    }
+    &_button {
+      padding: 2rem 0;
+      button {
+        margin-top: 1.3rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        width: 90%;
+        outline: none;
+        border: none;
+        background-color: $SoftBlue;
+        color: white;
+        font-size: 0.9rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .app__download {
+    &_browsers {
+      flex-direction: row;
+      & > div:nth-child(2) {
+        margin-top: 5rem;
+      }
+      & > div:nth-child(3) {
+        margin-top: 8rem;
+      }
+    }
+    .app__subheading {
+      margin-top: 5rem;
+      &-heading {
+        font-size: 2rem;
+      }
+      &-p {
+        margin: 0 auto;
+        margin-top: 2rem;
+        width: 50%;
+      }
+    }
+  }
+}

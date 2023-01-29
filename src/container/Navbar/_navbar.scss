@@ -1,0 +1,130 @@
+.app__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  &_logo img {
+    cursor: pointer;
+  }
+  &_hamburger > img {
+    cursor: pointer;
+  }
+  &_links {
+    display: none;
+    li {
+      margin-right: 2rem;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      font-weight: 500;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      cursor: pointer;
+      &:hover {
+        color: gray;
+      }
+    }
+    button {
+      padding: 0.7rem 2rem;
+      border-radius: 0.3rem;
+      background-color: $SoftRed;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background: white;
+        color: $SoftRed;
+        outline: 2px solid $SoftRed;
+      }
+    }
+  }
+}
+
+.hide {
+  visibility: hidden;
+}
+.show {
+  visibility: visible;
+}
+
+.app__nav_menu {
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  background-color: hsl(229, 31%, 21%, 0.9);
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+  }
+  &-heading {
+    display: flex;
+    justify-content: space-between;
+    img {
+      cursor: pointer;
+    }
+  }
+  &-list {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    color: white;
+    flex: 1;
+    li {
+      width: 100%;
+      padding: 0.8rem 0;
+      letter-spacing: 0.15rem;
+      cursor: pointer;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      line-height: 2rem;
+      &:nth-child(3) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+    }
+    button {
+      width: 100%;
+      padding: 0.7rem;
+      background-color: transparent;
+      color: white;
+      text-transform: uppercase;
+      border: 2px solid white;
+      border-radius: 5px;
+      cursor: pointer;
+      letter-spacing: 0.15rem;
+      margin-top: 2rem;
+      font-weight: 500;
+    }
+  }
+  &-socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1150px) {
+  .app__nav {
+    padding: 2rem 8rem;
+    &_links {
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.08rem;
+    }
+    &_hamburger {
+      display: none;
+    }
+  }
+}
